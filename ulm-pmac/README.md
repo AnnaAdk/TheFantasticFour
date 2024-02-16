@@ -1,6 +1,6 @@
 # ulm-pmac capstone project
 
 ## to start development:
-    npm install
-    npm run dev
+    1. npm install
+    2. npm run dev
 

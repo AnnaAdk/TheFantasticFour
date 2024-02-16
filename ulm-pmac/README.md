@@ -9,3 +9,5 @@ npm install
 ```    
 npm run dev
 ```    
+check localhost:5173 for a running build!
+if localhost:5173 doesn't work check your vs code terminal to see a message telling you the correct port number

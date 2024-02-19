@@ -20,11 +20,13 @@ const activeStyle = {
 };
 
 const acceptStyle = {
-  borderColor: '#00ff00'
+  borderColor: '#00ff00',
+  color: '#00ff00'
 };
 
 const rejectStyle = {
-  borderColor: '#ff0000'
+  borderColor: '#ff0000',
+  color: '#ff0000'
 };
 
 function FileBox() {
@@ -43,7 +45,7 @@ function FileBox() {
         key={file.name}
         src={file.preview}
         alt={file.name}
-        style={{position: '', left: '50%', top: '30%', height: '100px'}}
+        style={{height: '100px'}}
       />
 
   ));
@@ -57,7 +59,9 @@ function FileBox() {
     isDragReject
     } = useDropzone({
         onDrop,
-        accept: 'image/jpeg, image/png, application/pdf'
+        accept: { 'image/jpg' : [],
+                  'image/png' : [],
+                  'application/pdf' : []}
       });
   
   const style = useMemo(() => ({

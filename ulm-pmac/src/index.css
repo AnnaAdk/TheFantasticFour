@@ -67,11 +67,14 @@ button:focus-visible {
   }
 }
 
+
 .FileBox {
-  background-size: 1in;
-  background-image: image-set("./assets/file.png");
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: 0.6in;
-  background-blend-mode: multiply;
+  padding: 1in;
+  border-width: 2;
+  border-radius: 2;
+  border-style: solid;
+  background-color: #fafafa;
+  color: #444444;
+  border-color: #840029;
+  transition: border .3s ease-in-out;
 }

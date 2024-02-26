@@ -69,6 +69,10 @@ button:focus-visible {
 
 
 .FileBox {
+  background-image: url('./assets/file.png');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 25%;
   padding: 1in;
   border-width: 2;
   border-radius: 2;

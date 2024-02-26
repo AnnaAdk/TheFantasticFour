@@ -17,14 +17,27 @@ function FileBox(props) {
   const ref = useRef();
 
 
+
   const dropHandler = () => {
-    ref.current.color = "green";
+
+  }
+
+  const resetHandler = () => {
+
   }
   
   return (
 
     <>
-      <input className="FileBox" ref={ref} type="file" onDrop={dropHandler}/>
+      <form ref={ref}>
+        <input className="FileBox" id="fileBox" type="file" onDrop={dropHandler} accept='img/*'/>
+        <div>
+          <input type="submit" value="Save file"  style={{position:"relative", top:"-75px", left:"2in"}}/>
+        </div>
+        <div>
+          <input type="reset"  style={{position:"relative", top:"-75px", left:"2in"}} onclick={resetHandler}/>
+        </div>
+      </form>
     </>
   )
 }

@@ -1,5 +1,6 @@
 import file from "../assets/file.png";
 import FileBox from "./FileBox";
+import ProfilePicture from "./ProfilePicture";
 
 function App() {
   
@@ -7,7 +8,8 @@ function App() {
   
   return (
     <>
-    <FileBox  />
+    <ProfilePicture />
+    <FileBox />
     </>
   )
 }

@@ -29,13 +29,13 @@ function FileBox(props) {
   return (
 
     <>
-      <form ref={ref}>
-        <input className="FileBox" id="fileBox" type="file" onDrop={dropHandler} accept='img/*'/>
+      <form ref={ref} >
+        <input className="FileBox" id="fileBox" type="file" onDrop={dropHandler} />
         <div>
           <input type="submit" value="Save file"  style={{position:"relative", top:"-75px", left:"2in"}}/>
         </div>
         <div>
-          <input type="reset"  style={{position:"relative", top:"-75px", left:"2in"}} onclick={resetHandler}/>
+          <input type="reset"  style={{position:"relative", top:"-75px", left:"2in"}} onClick={resetHandler}/>
         </div>
       </form>
     </>

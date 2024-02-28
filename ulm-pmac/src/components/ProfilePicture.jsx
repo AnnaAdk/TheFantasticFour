@@ -6,7 +6,7 @@ const baseStyle = {
     width: '25px',
     position: 'absolute',
     top: '0px',
-    left: '0px',
+    right: '0px',
     borderRadius: '50%',
     display: 'inline-block',
     flexDirection: 'column',
@@ -21,10 +21,11 @@ const baseStyle = {
 };
 
 const pictureStyle = {
-    height: '100px',
-    position: 'relative',
+    width: '75px',
+    position: 'absolute',
     left: '0px',
-    top: '0px'
+    top: '0px',
+    zValue: '0'
 };
 
 const activeStyle = {
@@ -72,11 +73,13 @@ isDragAccept
 ]);
 
 const image = files.map(file => (
+    
     <img
     src={file.preview}
     key={file.name}
     {...pictureStyle}
     />
+    
 ));
 
 useEffect(() => () => {
@@ -84,7 +87,7 @@ files.forEach(file => URL.revokeObjectURL(file.preview));
 }, [files]);
 
 
-
+// hope to use this to be able to move pfp in the future
 useEffect(() => {
     const getCoords = e => {
         setCoords({
@@ -92,7 +95,6 @@ useEffect(() => {
             y: e.clientY,
         });
     };
-
     window.addEventListener('mousemove', getCoords);
 
     return () => {
@@ -104,14 +106,13 @@ useEffect(() => {
 
 }, []);
 
-
-
 return (
 <>
 <p>{coords.x}</p>
     <div {...getRootProps({style})}>
     <input {...getInputProps()} />
-    <span id='image' >{image}</span>
+    <div style={{position: 'absolute', top: '0px', left:'15px', fontSize:'10pt'}}>Drop image here</div>
+    <div id='image' style={{position: 'absolute', left:'-5px', top:'-5px' }}>{image}</div>
     </div>
 </>
 )

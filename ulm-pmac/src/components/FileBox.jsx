@@ -1,4 +1,5 @@
-import React,  { useRef} from 'react';
+import React,  {useRef, useState} from 'react';
+
 import filePng from '../assets/file.png';
 
 const acceptStyle = {
@@ -12,30 +13,33 @@ const rejectStyle = {
 };
 
 function FileBox(props) {
+  
   console.log(props);
+  const fileInput = useRef(null);
 
-  const ref = useRef();
-
-
-
-  const dropHandler = () => {
-
-  }
-
-  const resetHandler = () => {
-
-  }
+  const [files, setFiles] = useState([]);
   
   return (
 
     <>
-      <form ref={ref} >
-        <input className="FileBox" id="fileBox" type="file" onDrop={dropHandler} />
+      <form method='post' encType='mulitpart/form-data'>
+        <input 
+        className='FileBox'
+        ref={fileInput} 
+        type='file'
+        title=''
+        value=''
+        />
         <div>
-          <input type="submit" value="Save file"  style={{position:"relative", top:"-75px", left:"2in"}}/>
+          <input 
+          type='submit' 
+          value='Save file' 
+          style={{position:'relative', top:'-75px', left:'2in'}}/>
         </div>
         <div>
-          <input type="reset"  style={{position:"relative", top:"-75px", left:"2in"}} onClick={resetHandler}/>
+          <input 
+          type='reset'  
+          style={{position:'relative', top:'-75px', left:'2in'}}/>
         </div>
       </form>
     </>

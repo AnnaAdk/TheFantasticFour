@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { useDropzone } from 'react-dropzone';
+import profileImagePlaceholder from '../assets/profilePicturePlaceholder.png';
 
 const baseStyle = {
     height: '25px',
@@ -111,9 +112,11 @@ return (
 <p>{coords.x}</p>
     <div {...getRootProps({style})}>
     <input {...getInputProps()} />
-    <div style={{position: 'absolute', top: '0px', left:'15px', fontSize:'10pt'}}>Drop image here</div>
+    <img src={profileImagePlaceholder} style={{position: 'absolute', top: '-30px', left:'-20px', zValue: '-2', width:'112px'}} />
+    <div style={{position: 'absolute', top: '0px', left:'15px', fontSize:'10pt', zValue: '-1'}}>Drop image here</div>
     <div id='image' style={{position: 'absolute', left:'-5px', top:'-5px' }}>{image}</div>
     </div>
+    
 </>
 )
 }

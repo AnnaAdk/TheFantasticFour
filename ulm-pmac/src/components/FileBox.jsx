@@ -1,5 +1,4 @@
 import React,  {useRef, useState} from 'react';
-
 import filePng from '../assets/file.png';
 
 const acceptStyle = {

@@ -1,18 +1,29 @@
-import file from "../assets/file.png";
-import FileBox from "./FileBox";
-import ProfilePicture from "./ProfilePicture";
+import React, {useState}from "react";
+import Login from "./Login";
+import Dashboard from "./Dashboard";
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 function App() {
-  
 
-  
-  return (
+  const [token, setToken] = useState();
+
+  if(!token) {
+    return <Login setToken={setToken} />
+  }
+  return(
     <>
-    <ProfilePicture />
-    <FileBox />
+      <BrowserRouter>
+        <Switch>
+          <Route path="./">
+            <Dashboard/>
+          </Route>
+
+        </Switch>
+      </BrowserRouter>
     </>
-  )
+
+  );
 }
 
-export default App
+export default App;
 

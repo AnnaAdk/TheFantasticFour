@@ -3,9 +3,10 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color:#8B2C38; 
+  background-size:cover; 
+  font-size:larger; 
+  color:aliceblue;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -77,8 +78,35 @@ button:focus-visible {
   border-width: 2;
   border-radius: 2;
   border-style: solid;
-  background-color: #fafafa;
+  background-color: aliceblue;
   color: #444444;
   border-color: #840029;
   transition: border .3s ease-in-out;
+  border-radius: 15px;
+}
+
+input[type=text] {
+  height: 30px; 
+  margin: auto;
+  border-radius: 15px;
+}
+
+input[type=password]{
+  height: 30px; 
+  margin: auto;
+  border-radius: 15px;
+}
+
+input[type=submit] {
+  border-radius: 15px;
+  background-color: #840029;
+  color: aliceblue;
+  font-size: 12pt;
+}
+
+input[type=reset] {
+  border-radius: 15px;
+  background-color: #840029;
+  color: aliceblue;
+  font-size: 12pt;
 }

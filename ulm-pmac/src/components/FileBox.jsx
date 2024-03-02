@@ -42,7 +42,7 @@ function FileBox(props) {
         </div>
       </form>
     </>
-  )
-}
+  );
+};
 
 export default FileBox;

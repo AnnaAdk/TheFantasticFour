@@ -5,6 +5,6 @@ function Dashboard() {
   return (
     <ProfilePicture />
   );
-}
+};
 
 export default Dashboard;

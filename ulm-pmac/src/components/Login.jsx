@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 import App from './App';
 
 const loginStyle = {
@@ -8,23 +8,19 @@ top: "25%",
 };
 
 
-function Login(props) {
-    var show = props.show;
+function Login({onSubmit}) {
 
-    function handleLogin(e) {
-        e.preventDefault();
-        console.log(e.target.CWID.value);
-        props.show = false;
-    }
-
+    const [cwid, setCwid] = useState('');
+    const [password, setPassword] = useState('');
+    
     return (
     <center>
-        <form onSubmit={e => handleLogin(e)} style={{...loginStyle}}>
+        <form onSubmit={e => onSubmit(e, {cwid}, {password})} style={{...loginStyle}}>
             <div style={{fontSize:"18pt"}}>
                 Campus Wide ID:<br />
-                <input type="text" name="CWID"></input><br />
+                <input value={cwid} onChange={(e) => setCwid(e.target.value)} type="text" name="CWID"></input><br />
                 Password:<br />
-                <input type="password" name="password"></input>
+                <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" name="password"></input>
             </div>
             <input type="submit" value="Login" /><br />
             <input type="reset" value="clear"/>

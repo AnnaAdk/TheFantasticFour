@@ -74,7 +74,7 @@ button:focus-visible {
   background-repeat: no-repeat;
   background-position: top;
   background-size: 25%;
-  padding: 1in;
+  padding: 1.2in;
   border-width: 2;
   border-radius: 2;
   border-style: solid;
@@ -109,4 +109,19 @@ input[type=reset] {
   background-color: #840029;
   color: aliceblue;
   font-size: 12pt;
+}
+
+input[type=file]{
+  border-radius: 15px;
+  font-size: 12pt;
+}
+
+textarea {
+  height: 30px; 
+  margin: auto;
+  border-radius: 15px;
+}
+
+table{
+  border-spacing: 20px;
 }

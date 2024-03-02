@@ -1,5 +1,4 @@
 import React,  {useRef, useState} from 'react';
-import filePng from '../assets/file.png';
 
 const acceptStyle = {
   borderColor: '#00ff00',
@@ -33,12 +32,12 @@ function FileBox(props) {
           <input 
           type='submit' 
           value='Save file' 
-          style={{position:'relative', top:'-75px', left:'2in'}}/>
+          style={{position:'relative', top:'-75px', left:'2.2in'}}/>
         </div>
         <div>
           <input 
           type='reset'  
-          style={{position:'relative', top:'-75px', left:'2in'}}/>
+          style={{position:'relative', top:'-75px', left:'2.2in'}}/>
         </div>
       </form>
     </>

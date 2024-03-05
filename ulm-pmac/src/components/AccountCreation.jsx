@@ -15,7 +15,7 @@ function AccountCreation() {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     console.log(formData);
-    await fetch("http://127.0.0.1:8000/components/php/CreateAccount.php",{
+    await fetch("./CreateAccount.php",{
       method: 'POST',
       headers: new Headers({
                  'Content-Type': 'application/x-www-form-urlencoded',

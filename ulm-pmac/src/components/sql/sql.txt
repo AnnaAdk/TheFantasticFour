@@ -1,0 +1,70 @@
+create table applicant (
+CWID INT(8) NOT NULL PRIMARY KEY, 
+password CHAR(30) NOT NULL, 
+email char(50) NOT NULL,
+phoneNumber INT(8) NOT NULL,
+firstName char(30) NOT NULL,
+lastName char(30) NOT NULL,
+middleInitial char(1) NOT NULL);
+
+CREATE TABLE applicantInfo (
+    streetAdd1 char,
+    streetAdd2 char,
+    city char,
+    zipcode INT(5),
+    state CHAR(2),
+    CWID INT(8),
+    CONSTRAINT fk_applicantInfo_CWID FOREIGN KEY (CWID) REFERENCES applicant(CWID)
+);
+
+CREATE TABLE applicantSchoolInfo (
+    GPA char(4),
+    ulmEmail char,
+    major char,
+    minor char,
+    dateOfPurposedEntrance date,
+    typeofExam char,
+    typeOfApplication char,
+    CWID int(8),
+    CONSTRAINT fk_applicantSchoolInfo_CWID FOREIGN KEY (CWID) REFERENCES applicant(CWID)
+);
+CREATE TABLE applicantEventInfo (
+    activity char,
+    yearsAndTotalHours char,
+    Description char,
+    CWID int(8),
+    type char,
+    individualORgroup char,
+    CONSTRAINT fk_applicantMembershipInfo_CWID FOREIGN KEY (CWID) REFERENCES applicant(CWID)
+);
+create table applicantGrades(
+amcasID char, 
+aamcID char, 
+aacomas char,
+caspa char,
+aadsas char,
+CWID int(8),CONSTRAINT fk_applicantGrades_CWID FOREIGN KEY (CWID) REFERENCES applicant(CWID)
+);
+CREATE TABLE applicantProfExam (
+    typeofExam CHAR,
+    descriptionOfExam CHAR,
+    dateTaken DATE,
+    CWID INT(8),
+    CONSTRAINT fk_applicantProfExam_CWID FOREIGN KEY (CWID) REFERENCES applicant(CWID)
+);
+Create table ApplicantFacultyReco (
+faculty1 Char,
+dep1 char,
+faculty2  Char,
+dep2 char,
+CWID int(8),
+Foreign key(CWID) references applicant(CWID) 
+);
+Create table ApplicantHonors (
+awardName Char,
+awardDate date,
+awardDec  Char,
+CWID int(8),
+Foreign key(CWID) references applicant(CWID) 
+);
+

@@ -12,11 +12,15 @@ import LabResearchInfo from './LabResearchInfo';
 import VolunteerExperiences from './VolunteerExperiences';
 import FileBox from './FileBox';
 
+
 function Dashboard() {
   const [activePage, setActivePage] = useState('profile'); //Default to Profile
   const handlePageChange = (page) => {setActivePage(page);};
   return (
     <Router><div>
+    <head>
+    <link rel = "stylesheet"   href = "/styles/Dashboard.css"></link>
+    </head>
     <div><button onClick={() => handlePageChange('profile')}>Profile</button></div>
     <div><button onClick={() => handlePageChange('personalInfo')}>Personal Information</button></div>
     <div><button onClick={() => handlePageChange('medSchoolInfo')}>Medical School Information</button></div>

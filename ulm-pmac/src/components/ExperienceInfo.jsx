@@ -3,7 +3,7 @@ import React from 'react';
 function ExperienceInfo() {
   return (
     <>
-        <form action="AccountInfoUpload.php" method="post" encType="application/x-www-form-urlencoded">
+        <form action="Experience.php" method="post" encType="application/x-www-form-urlencoded">
             <table >
                 <tbody>
                     <tr><td colSpan="8">List any experiences related to the field for each semester and summer during your collegiate career.<br />

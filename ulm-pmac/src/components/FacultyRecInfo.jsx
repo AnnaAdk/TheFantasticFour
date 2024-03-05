@@ -3,7 +3,7 @@ import React from 'react';
 function FacultyRecInfo() {
   return (
     <>
-        <form action="AccountInfoUpload.php" method="post" encType="application/x-www-form-urlencoded">
+        <form action="FacultyRec.php" method="post" encType="application/x-www-form-urlencoded">
             <table>
                 <tbody>
                     <tr><td colSpan="4">Please Provide the name title and department of faculty members(2) submitting an evaluation on your behalf</td></tr>

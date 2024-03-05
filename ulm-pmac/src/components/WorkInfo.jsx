@@ -3,7 +3,7 @@ import React from 'react';
 function WorkInfo() {
   return (
     <>
-     <form action="AccountInfoUpload.php" method="post" encType="application/x-www-form-urlencoded">
+     <form action="WorkInfo.php" method="post" encType="application/x-www-form-urlencoded">
         <table>
             <tbody>
                 <tr><td colSpan="8">List any work for each semester and summer during your collegiate career.<br />

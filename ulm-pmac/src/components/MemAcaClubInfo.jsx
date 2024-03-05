@@ -3,7 +3,7 @@ import React from 'react';
 function MemAcaClubInfo() {
   return (
     <>
-        <form action="AccountInfoUpload.php" method="post" encType="application/x-www-form-urlencoded">
+        <form action="AcaClub.php" method="post" encType="application/x-www-form-urlencoded">
           <table >
               <tbody>
                   <tr><td colSpan="8">List any memberships/academic clubs for each semester and summer during your collegiate career.<br />

@@ -3,7 +3,7 @@ import React from 'react';
 function HonorsAndAwards() {
   return (
     <>
-        <form action="AccountInfoUpload.php" method="post" encType="application/x-www-form-urlencoded">
+        <form action="HonorsAward.php" method="post" encType="application/x-www-form-urlencoded">
             <table >
                 <tbody>
                     <tr><td colSpan="8">List any Awards and/or Honors related to the field for each semester and summer during your collegiate career.<br />

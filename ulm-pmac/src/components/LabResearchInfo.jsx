@@ -3,7 +3,7 @@ import React from 'react';
 function LabResearchInfo() {
   return (
     <>
-        <form action="AccountInfoUpload.php" method="post" encType="application/x-www-form-urlencoded">
+        <form action="LabResearch.php" method="post" encType="application/x-www-form-urlencoded">
             <table >
                 <tbody>
                     <tr><td colSpan="8">List any Lab Research related to the field for each semester and summer during your collegiate career.<br />

@@ -67,4 +67,9 @@ awardDec  Char,
 CWID int(8),
 Foreign key(CWID) references applicant(CWID) 
 );
+CREATE TABLE fileTable (
+	CWID int (8),
+    filename VARCHAR(255) NOT NULL,
+    pdfData LONGBLOB
+);
 

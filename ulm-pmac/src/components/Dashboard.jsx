@@ -28,19 +28,18 @@ function Dashboard() {
     <div><button onClick={() => handlePageChange('labResearch')}>Lab Research Information</button></div>
     <div><button onClick={() => handlePageChange('volunteer')}>Volunteer Experiences</button></div>
     <div><button onClick={() => handlePageChange('FileBox')}>FileBox</button></div>
-    <Switch>
-      <Route path = "/profile"><ProfilePicture></ProfilePicture></Route>
-      <Route path = "/personalInfo"><PersonalInfo></PersonalInfo></Route>
-      <Route path = "/medSchoolInfo"><MedSchoolInfo></MedSchoolInfo></Route>
-      <Route path = "/facRecInfo"><FacultyRecInfo></FacultyRecInfo></Route>
-      <Route path = "/membershipInfo"><MemAcaClubInfo></MemAcaClubInfo></Route>
-      <Route path = "/workInfo"><WorkInfo></WorkInfo></Route>
-      <Route path = "/experienceInfo"><ExperienceInfo></ExperienceInfo></Route>
-      <Route path = "/honsAwds"><HonorsAndAwards></HonorsAndAwards></Route>
-      <Route path = "/labResearch"><LabResearchInfo></LabResearchInfo></Route>
-      <Route path = "/volunteer"><VolunteerExperiences></VolunteerExperiences></Route>
-      <Route path = "/Filebox"><FileBox></FileBox></Route>
-    </Switch>
+    
+      {activePage === 'profile' && <ProfilePicture></ProfilePicture>}
+      {activePage === 'personalInfo' && <PersonalInfo></PersonalInfo> }
+      {activePage === 'medSchoolInfo' && <MedSchoolInfo></MedSchoolInfo> }
+      {activePage === 'facRecInfo' && <FacultyRecInfo></FacultyRecInfo> }
+      {activePage === 'membershipInfo' && <MemAcaClubInfo></MemAcaClubInfo> }
+      {activePage === 'workInfo' && <WorkInfo></WorkInfo> }
+      {activePage === 'experienceInfo' && <ExperienceInfo></ExperienceInfo> }
+      {activePage === 'honAwd' && <HonorsAndAwards></HonorsAndAwards> }
+      {activePage === 'labResearch' && <LabResearchInfo></LabResearchInfo> }
+      {activePage === 'volunteer' && <VolunteerExperiences></VolunteerExperiences> }
+      {activePage === 'Filebox' && <FileBox></FileBox> }
     </div>
     </Router>
 

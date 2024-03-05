@@ -3,8 +3,8 @@ import { useDropzone } from 'react-dropzone';
 import profileImagePlaceholder from '../assets/profilePicturePlaceholder.png';
 
 const baseStyle = {
-    height: '25px',
-    width: '25px',
+    height: '50px',
+    width: '50px',
     position: 'absolute',
     top: '0px',
     right: '0px',

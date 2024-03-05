@@ -19,7 +19,7 @@ function Dashboard() {
   return (
     <Router><div>
     <head>
-    <link rel = "stylesheet"   href = "/styles/Dashboard.css"></link>
+    <link ></link>
     </head>
     <div><button onClick={() => handlePageChange('profile')}>Profile</button></div>
     <div><button onClick={() => handlePageChange('personalInfo')}>Personal Information</button></div>
@@ -28,10 +28,10 @@ function Dashboard() {
     <div><button onClick={() => handlePageChange('membershipInfo')}>Membership Information</button></div>
     <div><button onClick={() => handlePageChange('workInfo')}>Work Information</button></div>
     <div><button onClick={() => handlePageChange('experienceInfo')}>Experience Information</button></div>
-    <div><button onClick={() => handlePageChange('honsAwds')}>Honors and Awards</button></div>
+    <div><button onClick={() => handlePageChange('honAwd')}>Honors and Awards</button></div>
     <div><button onClick={() => handlePageChange('labResearch')}>Lab Research Information</button></div>
     <div><button onClick={() => handlePageChange('volunteer')}>Volunteer Experiences</button></div>
-    <div><button onClick={() => handlePageChange('FileBox')}>FileBox</button></div>
+    <div><button onClick={() => handlePageChange('Filebox')}>FileBox</button></div>
     
       {activePage === 'profile' && <ProfilePicture></ProfilePicture>}
       {activePage === 'personalInfo' && <PersonalInfo></PersonalInfo> }

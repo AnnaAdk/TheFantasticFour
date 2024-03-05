@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Form } from 'react-router-dom';
 
 function AccountCreation() {
   const [formData, setFormData] = useState({
@@ -11,10 +12,17 @@ function AccountCreation() {
     Mini: ''
   });
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
     console.log(formData);
-  };
+    await fetch("http://127.0.0.1:8000/components/php/CreateAccount.php",{
+      method: 'POST',
+      headers: new Headers({
+                 'Content-Type': 'application/x-www-form-urlencoded',
+        }),
+      body: formData
+    });
+  }
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;

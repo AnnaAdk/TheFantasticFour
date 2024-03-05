@@ -25,7 +25,7 @@ $mint = $data['Mini'];
 
 // SQL query to insert data
 $sql = "INSERT INTO applicant (CWID, password, email, phoneNumber, firstName, lastName, middleInitial)
-        VALUES ('$CWID', '$Password', '$Email', $Phone, '$Fname', '$Lname', '$Mini')";
+        VALUES ($CWID, $Password, $Email, $Phone, $Fname, $Lname, $Mini)";
 
 if ($conn->query($sql) === TRUE) {
     echo "Data inserted successfully!";

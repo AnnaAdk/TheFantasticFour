@@ -20,13 +20,11 @@ function FileBox(props) {
   return (
 
     <>
-      <form method='post' encType='mulitpart/form-data'>
+      <form method='post' encType='application/x-www-form-urlencoded'>
         <input 
         className='FileBox'
         ref={fileInput} 
         type='file'
-        title=''
-        value=''
         />
         <div>
           <input 

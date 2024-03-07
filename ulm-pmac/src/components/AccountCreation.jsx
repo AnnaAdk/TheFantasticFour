@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form } from 'react-router-dom';
+import axios from 'axios';
 
 function AccountCreation() {
   const [formData, setFormData] = useState({
@@ -12,17 +12,18 @@ function AccountCreation() {
     Mini: ''
   });
 
-  const handleFormSubmit = async (e) => {
-    e.preventDefault();
-    console.log(formData);
-    await fetch("./CreateAccount.php",{
+  const handleFormSubmit = (e) => {
+    e.preventDefault();    
+
+    fetch("http://3.85.220.120/CreateAccount.php", {
       method: 'POST',
-      headers: new Headers({
-                 'Content-Type': 'application/x-www-form-urlencoded',
-        }),
-      body: formData
-    });
-  }
+      headers: {
+        'Conent-Type': 'application/json',
+      },
+      body: JSON.stringify(formData)
+    }).then((res)=>console.log(res))
+    .catch(function(error) {console.log("Request failed", error)});
+  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -34,7 +35,7 @@ function AccountCreation() {
 
   return (
     <>
-      <form action="CreateAccount.php" onSubmit={handleFormSubmit} method="post" encType="application/x-www-form-urlencoded">
+      <form onSubmit={handleFormSubmit} method="POST" encType="multipart/form-data">
         <table>
           <tbody>
             <tr><td>CWID:</td><td><input type="int" name="CWID" value={formData.CWID} onChange={handleInputChange} /><br /></td></tr>

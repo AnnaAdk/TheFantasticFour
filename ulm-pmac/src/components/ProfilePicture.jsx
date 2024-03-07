@@ -22,7 +22,7 @@ const baseStyle = {
 };
 
 const pictureStyle = {
-    width: '75px',
+    width: '100px',
     position: 'absolute',
     left: '0px',
     top: '0px',
@@ -112,8 +112,8 @@ return (
 <p>{coords.x}</p>
     <div {...getRootProps({style})}>
     <input {...getInputProps()} />
-    <img src={profileImagePlaceholder} style={{position: 'absolute', top: '-30px', left:'-20px', zValue: '-2', width:'112px'}} />
-    <div style={{position: 'absolute', color: '#FDB913', top: '5px', left:'17px', fontSize:'9pt', zValue: '-1'}}>Drop image here</div>
+    <img src={profileImagePlaceholder} style={{position: 'absolute', top: '-20px', left:'-12px', zValue: '-2', width:'112px'}} />
+    <div style={{position: 'absolute', color: '#FDB913' , textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000', top: '7px', left:'20px', fontSize:'12pt', zValue: '-1'}}>Drop image here</div>
     <div id='image' style={{position: 'absolute', left:'-5px', top:'-5px' }}>{image}</div>
     </div>
     

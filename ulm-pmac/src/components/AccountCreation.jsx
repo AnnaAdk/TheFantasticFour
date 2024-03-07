@@ -15,7 +15,7 @@ function AccountCreation() {
   const handleFormSubmit = (e) => {
     e.preventDefault();    
 
-    fetch("http://3.85.220.120/CreateAccount.php", {
+    fetch("./public/php/CreateAccount.php", {
       method: 'POST',
       headers: {
         'Conent-Type': 'application/json',

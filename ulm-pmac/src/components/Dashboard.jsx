@@ -39,7 +39,7 @@ function Dashboard() {
       {activePage === 'honAwd' && <HonorsAndAwards></HonorsAndAwards> }
       {activePage === 'labResearch' && <LabResearchInfo></LabResearchInfo> }
       {activePage === 'volunteer' && <VolunteerExperiences></VolunteerExperiences> }
-      <br /><FileBox></FileBox></div>}
+      <br /><FileBox></FileBox></div>
     </>
     
     

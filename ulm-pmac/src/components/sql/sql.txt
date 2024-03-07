@@ -58,7 +58,9 @@ dep1 char,
 faculty2  Char,
 dep2 char,
 CWID int(8),
-Foreign key(CWID) references applicant(CWID) 
+Foreign key(CWID) references applicant(CWID),
+title char,
+title2 char
 );
 Create table ApplicantHonors (
 awardName Char,

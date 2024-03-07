@@ -22,11 +22,13 @@ $fac1 = $data['FacultyNameOne'];
 $dep1 = $data['FacultyDepOne'];
 $fac1 = $data['FacultyNameTwo'];
 $dep1 = $data['FacultyDepTwp'];
+$title1 = $data['FacultyTitleOne'];
+$title2 = $data['FacultyTitleTwo'];
 $cwid = 0;
 
 // SQL query to insert data
-$sql = "INSERT INTO applicantFacultyReco (faculty1, dep1, faculty2, dep2, CWID)
-        VALUES ('$fac1', '$dep1', '$fac2', $dep2, '$cwid')";
+$sql = "INSERT INTO applicantFacultyReco (faculty1, dep1, faculty2, dep2, CWID, title, title2)
+        VALUES ('$fac1', '$dep1', '$fac2', $dep2, '$cwid', '$title1', '$title2')";
 
 if ($conn->query($sql) === TRUE) {
     echo "Data inserted successfully!";

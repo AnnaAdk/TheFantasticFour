@@ -15,7 +15,7 @@ const baseStyle = {
     borderWidth: 2,
     borderColor: '#840029',
     borderStyle: 'solid',
-    backgroundColor: '#fafafa',
+    backgroundColor: 'aliceblue',
     color: '#bdbdbd',
     transition: 'border .3s ease-in-out',
     overflow: 'hidden'
@@ -26,7 +26,7 @@ const pictureStyle = {
     position: 'absolute',
     left: '0px',
     top: '0px',
-    zValue: '0'
+    
 };
 
 const activeStyle = {
@@ -109,11 +109,10 @@ useEffect(() => {
 
 return (
 <>
-<p>{coords.x}</p>
     <div {...getRootProps({style})}>
     <input {...getInputProps()} />
-    <img src={profileImagePlaceholder} style={{position: 'absolute', top: '-20px', left:'-12px', zValue: '-2', width:'112px'}} />
-    <div style={{position: 'absolute', color: '#FDB913' , textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000', top: '7px', left:'20px', fontSize:'12pt', zValue: '-1'}}>Drop image here</div>
+    <img src={profileImagePlaceholder} style={{position: 'absolute', top: '-39px', left:'-27px', width:'150px'}} />
+    <div style={{position: 'absolute', color: '#FDB913' ,textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000', top: '8px', left:'23px', fontSize:'12pt'}}>Drop image here</div>
     <div id='image' style={{position: 'absolute', left:'-5px', top:'-5px' }}>{image}</div>
     </div>
     

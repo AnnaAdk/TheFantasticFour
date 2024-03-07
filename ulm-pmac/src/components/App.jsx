@@ -31,7 +31,7 @@ function App() {
 
   return(
     <>
-      {!showAccountCreation && showLogin && <Login onSubmit={(e, cwid, password) => handleLogin(e, cwid, password)}/>}
+      {!showAccountCreation && showLogin && <div style={{}}><Login onSubmit={(e, cwid, password) => handleLogin(e, cwid, password)}/></div>}
       {!showAccountCreation && !showLogin && <Dashboard />}
       {showAccountCreation && !showLogin && <AccountCreation />}
       {!showAccountCreation && showLogin && <div ><br /><center style={{position: "absolute", left: "50%", top: "50%"}}>Need an account?<br />

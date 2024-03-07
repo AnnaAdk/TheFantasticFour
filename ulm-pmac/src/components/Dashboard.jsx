@@ -14,26 +14,22 @@ import FileBox from './FileBox';
 
 
 function Dashboard() {
-  const [activePage, setActivePage] = useState('profile'); //Default to Profile
+  const [activePage, setActivePage] = useState('personalInfo'); //Default to Profile
   const handlePageChange = (page) => {setActivePage(page);};
   return (
-    <Router><div>
-    <head>
-    <link ></link>
-    </head>
-    <div><button onClick={() => handlePageChange('profile')}>Profile</button></div>
-    <div><button onClick={() => handlePageChange('personalInfo')}>Personal Information</button></div>
-    <div><button onClick={() => handlePageChange('medSchoolInfo')}>Medical School Information</button></div>
-    <div><button onClick={() => handlePageChange('facRecInfo')}>Faculty Recommendation Information</button></div>
-    <div><button onClick={() => handlePageChange('membershipInfo')}>Membership Information</button></div>
-    <div><button onClick={() => handlePageChange('workInfo')}>Work Information</button></div>
-    <div><button onClick={() => handlePageChange('experienceInfo')}>Experience Information</button></div>
-    <div><button onClick={() => handlePageChange('honAwd')}>Honors and Awards</button></div>
-    <div><button onClick={() => handlePageChange('labResearch')}>Lab Research Information</button></div>
-    <div><button onClick={() => handlePageChange('volunteer')}>Volunteer Experiences</button></div>
-    <div><button onClick={() => handlePageChange('Filebox')}>FileBox</button></div>
-    
-      {activePage === 'profile' && <ProfilePicture></ProfilePicture>}
+    <>
+      <ProfilePicture></ProfilePicture>
+      <div>
+      <button onClick={() => handlePageChange('personalInfo')}>Personal Information</button>
+      <button onClick={() => handlePageChange('medSchoolInfo')}>Medical School Information</button>
+      <button onClick={() => handlePageChange('facRecInfo')}>Faculty Recommendation Information</button>
+      <button onClick={() => handlePageChange('membershipInfo')}>Membership Information</button>
+      <button onClick={() => handlePageChange('workInfo')}>Work Information</button>
+      <button onClick={() => handlePageChange('experienceInfo')}>Experience Information</button>
+      <button onClick={() => handlePageChange('honAwd')}>Honors and Awards</button>
+      <button onClick={() => handlePageChange('labResearch')}>Lab Research Information</button>
+      <button onClick={() => handlePageChange('volunteer')}>Volunteer Experiences</button>
+      
       {activePage === 'personalInfo' && <PersonalInfo></PersonalInfo> }
       {activePage === 'medSchoolInfo' && <MedSchoolInfo></MedSchoolInfo> }
       {activePage === 'facRecInfo' && <FacultyRecInfo></FacultyRecInfo> }
@@ -43,9 +39,10 @@ function Dashboard() {
       {activePage === 'honAwd' && <HonorsAndAwards></HonorsAndAwards> }
       {activePage === 'labResearch' && <LabResearchInfo></LabResearchInfo> }
       {activePage === 'volunteer' && <VolunteerExperiences></VolunteerExperiences> }
-      {activePage === 'Filebox' && <FileBox></FileBox> }
-    </div>
-    </Router>
+      <br /><FileBox></FileBox></div>}
+    </>
+    
+    
 
   );
 };

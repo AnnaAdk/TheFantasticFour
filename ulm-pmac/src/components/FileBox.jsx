@@ -11,8 +11,6 @@ const rejectStyle = {
 };
 
 function FileBox(props) {
-  
-  console.log(props);
   const fileInput = useRef(null);
 
   const [files, setFiles] = useState([]);

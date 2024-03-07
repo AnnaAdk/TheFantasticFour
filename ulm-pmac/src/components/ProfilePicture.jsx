@@ -5,7 +5,8 @@ import profileImagePlaceholder from '../assets/profilePicturePlaceholder.png';
 const baseStyle = {
     height: '50px',
     width: '50px',
-    position: 'absolute',
+    position: 'relative',
+    marginLeft: 'auto',
     top: '0px',
     right: '0px',
     borderRadius: '50%',
@@ -13,7 +14,7 @@ const baseStyle = {
     flexDirection: 'column',
     padding: '20px',
     borderWidth: 2,
-    borderColor: '#840029',
+    borderColor: 'aliceblue',
     borderStyle: 'solid',
     backgroundColor: 'aliceblue',
     color: '#bdbdbd',
@@ -112,7 +113,7 @@ return (
     <div {...getRootProps({style})}>
     <input {...getInputProps()} />
     <img src={profileImagePlaceholder} style={{position: 'absolute', top: '-39px', left:'-27px', width:'150px'}} />
-    <div style={{position: 'absolute', color: '#FDB913' ,textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000', top: '8px', left:'23px', fontSize:'12pt'}}>Drop image here</div>
+    <div style={{position: 'absolute', color: 'aliceblue' ,textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000', top: '8px', left:'23px', fontSize:'12pt'}}>Drop image here</div>
     <div id='image' style={{position: 'absolute', left:'-5px', top:'-5px' }}>{image}</div>
     </div>
     

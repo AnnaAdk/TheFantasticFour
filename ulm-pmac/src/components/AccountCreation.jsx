@@ -15,7 +15,7 @@ function AccountCreation() {
   const handleFormSubmit = (e) => {
     e.preventDefault();    
 
-    fetch("./public/php/CreateAccount.php", {
+    fetch("./php/CreateAccount.php", {
       method: 'POST',
       headers: {
         'Conent-Type': 'application/json',

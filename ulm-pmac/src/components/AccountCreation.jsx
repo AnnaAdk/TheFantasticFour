@@ -3,7 +3,7 @@ import axios from 'axios';
 
 function AccountCreation() {
   const [formData, setFormData] = useState({
-    CWID: '',
+    id: '',
     Password: '',
     Email: '',
     Phone: '',
@@ -15,10 +15,10 @@ function AccountCreation() {
   const handleFormSubmit = (e) => {
     e.preventDefault();    
 
-    fetch("./php/CreateAccount.php", {
+    fetch("http://localhost:3000/accounts", {
       method: 'POST',
       headers: {
-        'Conent-Type': 'application/json',
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify(formData)
     }).then((res)=>console.log(res))
@@ -38,7 +38,7 @@ function AccountCreation() {
       <form onSubmit={handleFormSubmit} method="POST" encType="multipart/form-data">
         <table>
           <tbody>
-            <tr><td>CWID:</td><td><input type="int" name="CWID" value={formData.CWID} onChange={handleInputChange} /><br /></td></tr>
+            <tr><td>CWID:</td><td><input type="int" name="id" value={formData.id} onChange={handleInputChange} /><br /></td></tr>
             <tr><td>Password:</td><td><input type="password" name="Password" value={formData.Password} onChange={handleInputChange} /><br /></td></tr>
             <tr><td>Non-School Email:</td><td><input type="text" name="Email" value={formData.Email} onChange={handleInputChange} /><br /></td></tr>
             <tr><td>Cell Phone:</td><td><input type="text" name="Phone" value={formData.Phone} onChange={handleInputChange} /><br /></td></tr>

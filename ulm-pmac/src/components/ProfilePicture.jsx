@@ -113,7 +113,7 @@ return (
     <div {...getRootProps({style})}>
     <input {...getInputProps()} />
     <img src={profileImagePlaceholder} style={{position: 'absolute', top: '-39px', left:'-27px', width:'150px'}} />
-    <div style={{position: 'absolute', color: 'aliceblue' ,textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000', top: '8px', left:'23px', fontSize:'12pt'}}>Drop image here</div>
+    <div style={{position: 'absolute', color: 'aliceblue' ,textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000', top: '8px', left:'22.5px', fontSize:'12pt'}}>Drop<br />image<br />here</div>
     <div id='image' style={{position: 'absolute', left:'-5px', top:'-5px' }}>{image}</div>
     </div>
     

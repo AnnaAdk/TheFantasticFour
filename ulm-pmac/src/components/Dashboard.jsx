@@ -17,13 +17,26 @@ const bannerStyle = {
   backgroundColor: "#840029", 
   padding: '10px',
   display: 'flex',
+
 }
-function Dashboard() {
+
+const bannerTextStyle ={
+  fontSize: '24pt',
+  color: 'aliceblue'
+}
+
+function Dashboard(props) {
   const [activePage, setActivePage] = useState('personalInfo'); //Default to Profile
   const handlePageChange = (page) => {setActivePage(page);};
+
   return (
     <>
-      <div style={{...bannerStyle}}><img src={UlmLogo} height="100px" /><ProfilePicture /></div>
+      <div style={{...bannerStyle}}>
+        <img src={UlmLogo} height="100px" />
+        <span style={{...bannerTextStyle}}>Welcome {props.Fname}!</span>
+        <ProfilePicture />
+      </div>
+
       <div>
         <button onClick={() => handlePageChange('personalInfo')}>Personal Information</button>
         <button onClick={() => handlePageChange('medSchoolInfo')}>Medical School Information</button>
